@@ -1,12 +1,16 @@
 package com.Bukas.GameObjects;
 
-public class GameEngine {
-    Board board;
-    int playerCount;
-    Player[] playerList;
-    public GameEngine(Board board, int playerCount) {
-        this.board = board;
-        this.playerCount = playerCount;
+import com.Bukas.GameCells.CellType;
+import javafx.scene.control.Cell;
+
+public class GameService {
+    //Board board;
+    //int playerCount;
+    //Player[] playerList;
+
+    private Map<CellType, CellActionService> actionServiceMap;
+
+    public void init(Board board, int playerCount) {
         playerList = new Player[playerCount];
         for (int i = 0; i < playerCount; i++) {
             playerList[i] = new Player("Player" + (i + 1));
@@ -20,6 +24,23 @@ public class GameEngine {
         }
         System.out.println();
     }
+
+    public void play(Board b) {
+        while (i < 100) {
+            //get player
+            //throw dice
+            //cell makeStep(board, player, stepCount)
+            //doStepAction(cell, player)
+
+            //do check players
+        }
+    }
+
+    private void doStepAction(Cell cell, Player p) {
+        ActionService svc = actionServiceMap.get(cell.getType());
+        svc.doSmth(cell, p);
+    }
+
     private void makeStep(Player player){
         //System.out.println(player.name);
         int[] diceRes = Dice.throwDice();

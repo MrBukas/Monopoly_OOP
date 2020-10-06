@@ -1,12 +1,17 @@
 package com.Bukas.GameObjects;
 
 import com.Bukas.GameCells.*;
+import javafx.scene.control.Cell;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Board {
+    private List<Player> playerList;
+    private Map<Cell, List<Player>> cellToPlayersMap;
     static Scanner scanner;
     class BoardCell{
         GameCell cell;
