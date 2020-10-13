@@ -18,4 +18,8 @@ public class CellTax extends GameCell{
         }
 
     }
+
+    public int getTax() {
+        return tax;
+    }
 }

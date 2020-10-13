@@ -21,19 +21,7 @@ public class CellProperty extends GameCell {
 
     @Override
     public void action(Player player) {
-        if (owner == null){
-            if (player.getMoney() >= price){
-                buy(player);
-                System.out.println(player.getName() + " bought " + name + " for " + price + "$");
-            }
-        }else {
-            player.pay(rent[houseTier]);
-            owner.addMoney(rent[houseTier]);
-            System.out.println(
-                    player.getName() + " paid " + rent[houseTier] + "$ to " +
-                            owner.getName() + " for staying on " + name);
-        }
-
+        //Была убрана и перемещена в ActionProperty
     }
 
     public int getPrice() {
@@ -48,13 +36,9 @@ public class CellProperty extends GameCell {
         this.owner = owner;
     }
 
-    public boolean buy(Player player){
-        if (player.pay(getPrice())){
-            setOwner(player);
-            return true;
-        } else{
-            return false;
-        }
+
+    public int getRent(){
+        return rent[houseTier];
     }
 
 
