@@ -2,9 +2,9 @@ package com.Bukas.GameCells;
 
 import com.Bukas.GameObjects.Player;
 
-public class CellService extends GameCell{
+public class CellMunicipal extends GameCell{
     Player owner;
-    public CellService(String name) {
+    public CellMunicipal(String name) {
         super(name, CellType.SERVICE);
     }
 }

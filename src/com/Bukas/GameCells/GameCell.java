@@ -12,9 +12,6 @@ public abstract class GameCell {
         this.type = type;
     }
 
-    public void action(Player player){//TODO подумать нужно ли делать абстрактным
-
-    }
 
     public String getName() {
         return name;

@@ -19,10 +19,7 @@ public class CellProperty extends GameCell {
         houseTier = 0;
     }
 
-    @Override
-    public void action(Player player) {
-        //Была убрана и перемещена в ActionProperty
-    }
+
 
     public int getPrice() {
         return price;

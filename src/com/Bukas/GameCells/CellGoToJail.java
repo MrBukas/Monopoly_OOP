@@ -7,8 +7,4 @@ public class CellGoToJail extends GameCell{
         super("Отправляйтесь в тюрьму", CellType.GOTOJAIL);
     }
 
-    @Override
-    public void action(Player player) {
-        player.goToJail();
-    }
 }

@@ -13,15 +13,7 @@ public class Board {
     private List<Player> playerList;
     private Map<Cell, List<Player>> cellToPlayersMap;
     static Scanner scanner;
-    class BoardCell{
-        GameCell cell;
-        BoardCell next;
 
-        public BoardCell(GameCell cell, BoardCell next) {
-            this.cell = cell;
-            this.next = next;
-        }
-    }
     static GameCell start = new CellStart("Start");
     static BoardCell startCell;
     static BoardCell jailCell;
@@ -48,7 +40,7 @@ public class Board {
                 case ("CHEST"): addCell(readChest()); break;
                 case ("GOTOJAIL"): addCell(readGoToJail()); break;
                 case ("JAIL"): addCell(readJail()); jailCell = lastAddedCell; break;
-                case ("SERVICE"): addCell(readService()); break;
+                case ("MUNICIPAL"): addCell(readService()); break;
                 case ("PARKING"): addCell(readParking()); break;
             }
         }
@@ -97,7 +89,7 @@ public class Board {
     private GameCell readJail(){
         return new CellJail();
     }
-    private GameCell readService() { return new CellService(scanner.next());}
+    private GameCell readService() { return new CellMunicipal(scanner.next());}
     private GameCell readParking() { return new CellParking();}
 
 }

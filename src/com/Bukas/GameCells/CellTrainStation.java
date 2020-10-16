@@ -8,8 +8,4 @@ public class CellTrainStation extends GameCell{
         super(name, CellType.TRAINSTATION);
     }
 
-    @Override
-    public void action(Player player) {
-        //TODO считать сколько станций у владельца
-    }
 }

@@ -7,8 +7,4 @@ public class CellChance extends GameCell{
         super("Шанс", CellType.CHANCE);
     }
 
-    @Override
-    public void action(Player player) {
-        //TODO добавить механику вытягивания шансов
-    }
 }
